@@ -35,7 +35,7 @@ Runtime: ContainerD
 VPN: OpenVPN  
 CICD: GitLab-CI, Jenkins  
 Local Registry: Registry  
-Manage:  Portainer, Docker-compose  
+Manage:  Portainer, Docker Compose  
 Reverse Proxy: Nginx proxy manager  
 
 ### Kubernetes component.
