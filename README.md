@@ -43,7 +43,7 @@ Reverse Proxy: Nginx proxy manager
 Runtime: CRI-O  
 Ingress: Nginx Ingress controller  
 Networking: Cilium  
-IPpool: Metallb  
+LoadBalancer: MetalLB  
 Storage class: NFS  
 #### Tools
 Manage: Portainer-agent, Kubectl, Lens  
