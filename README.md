@@ -28,7 +28,7 @@ I've been Learning to deliver high quality software.
 
 ### lab environment
 
-<img src="Architecture.jpg"/>
+<img src="Architecture.png"/>
 
 ### Docker component.
 Runtime: ContainerD  
