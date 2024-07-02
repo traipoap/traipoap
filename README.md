@@ -29,7 +29,7 @@ I've been Learning to deliver high quality software.
 
 <img src="DevOps.png"/>
 
-### lab environment
+### Lab Environment
 
 <img src="Architecture.png"/>
 
