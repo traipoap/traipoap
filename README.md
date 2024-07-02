@@ -27,11 +27,11 @@ I've been Learning to deliver high quality software.
 
 ### DevOps Technologies
 
-<img src="DevOps.png"/>
+<img src="devops.png"/>
 
 ### Lab Environment
 
-<img src="Environment.png"/>
+<img src="workflow.png"/>
 
 ### Docker component.
 Runtime: ContainerD  
