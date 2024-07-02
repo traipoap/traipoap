@@ -31,7 +31,7 @@ I've been Learning to deliver high quality software.
 
 ### Lab Environment
 
-<img src="Architecture.png"/>
+<img src="Environment.png"/>
 
 ### Docker component.
 Runtime: ContainerD  
