@@ -27,7 +27,7 @@ I've been Learning to deliver high quality software.
 
 ### DevOps Technologies
 
-<img src="devops.png"/>
+<img src="devops.svg"/>
 
 ### DevOps Workflow.
 
