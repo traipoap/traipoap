@@ -29,9 +29,9 @@ I've been Learning to deliver high quality software.
 
 <img src="devops.png"/>
 
-### Lab Environment
+### DevOps Workflow.
 
-<img src="workflow.png"/>
+<img src="workflow.svg"/>
 
 ### Docker component.
 Runtime: ContainerD  
