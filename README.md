@@ -8,6 +8,7 @@ I've been Learning to deliver high quality software.
 
 * 🌍  I'm based in Nonthaburi, Thailand
 * ✉️  You can contact me at [traipoap@hotmail.com](mailto:traipoap@hotmail.com)
+* Portfolio: https://18.143.172.162
 
 ### Skills
 
