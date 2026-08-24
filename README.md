@@ -1,53 +1,51 @@
 Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif)My name is Traipoap.
-================================================================================================================================
 
-Network administrator.
----------------------
+# Platform / DevOps Engineer
 
-I've been Learning to deliver high quality software.
+I design, build, and operate **Kubernetes platforms** where everything — infrastructure, configuration, and applications — is declared in Git and deployed automatically (GitOps). In practice, this means:
 
-* 🌍  I'm based in Nonthaburi, Thailand
-* ✉️  You can contact me at [traipoap@hotmail.com](mailto:traipoap@hotmail.com)
+* ⏱️ A full platform (VMs, K3s cluster, service mesh, monitoring, logging) is provisioned in **~20 minutes** instead of several hours
+* ✅ **No manual Kubernetes deployment steps** — the cluster continuously reconciles itself to the state declared in Git
+* 🔁 A complete, repeatable rebuild of the environment from a single repository
 
-### Skills
+## What I do
 
-<p align="left">
-<a href="https://git-scm.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" width="36" height="36" alt="Git" /></a><a href="https://www.python.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg" width="36" height="36" alt="Python" /></a><a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/gnubash.svg" width="36" height="36" alt="GNU Bash" /></a><a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/visualstudiocode.svg" width="36" height="36" alt="VS Code" /></a><a href="https://www.vim.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vim.svg" width="36" height="36" alt="Vim" /></a><a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/docker-colored.svg" width="36" height="36" alt="Docker" /><a href="https://kubernetes.io" target="_blank" rel="noreferrer"><img src="https://kubernetes.io/icons/favicon-32.png" width="36" height="36" alt="K8s" /></a></a><a href="https://www.linux.org" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/linux-colored.svg" width="36" height="36" alt="Linux" /></a><a href="https://apple.com" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/macos-colored-dark.svg" width="36" height="36" alt="MacOS" /></a>
-</p>
+| Skill | In plain terms |
+|---|---|
+| **Infrastructure as Code** (Terraform, Ansible) | VMs, OS setup, and cluster installs are created from code — no manual clicks |
+| **GitOps** (Flux CD, Kustomize, Helm) | The cluster stays in sync with Git automatically; configuration drift is detected and corrected |
+| **CI/CD** (GitHub Actions, Docker) | Push code → lint/test → build image → deploy, fully automated |
+| **Kubernetes & service mesh** (K3s, Istio, Gateway API) | High-availability clusters with routing, TLS, and traffic visibility |
+| **Observability** (Prometheus, Grafana, Kiali, Vector, Quickwit) | Metrics, dashboards, service-mesh traffic views, and centralized log search |
+| **Storage & security** (NFS, Garage S3, cert-manager, RBAC) | Persistent + S3-compatible storage, automated TLS certificates, access control |
+| **Application operations** (Go, JS) | Operate polyglot stacks — Go APIs, Astro/JS frontends |
 
-### DevOps Technologies
+## Certifications
 
-<img src="devops.svg"/>
+* 🎓 **CKA** — Certified Kubernetes Administrator
+* 🎓 **CKAD** — Certified Kubernetes Application Developer
+* 📚 **AWS SAA** — AWS Solutions Architect Associate *(in progress)*
 
-### DevOps Workflow.
+## Selected Projects
 
-<img src="workflow.svg"/>
+### [K3s GitOps Platform on Proxmox](https://github.com/traipoap/gitops-platform)
+End-to-end platform automation: Terraform provisions the VMs, Ansible installs and configures the K3s cluster, and Flux CD then manages everything from Git — including the CI/CD pipeline, monitoring, centralized logging, and S3 object storage.
 
-### Docker component.
-Runtime: ContainerD  
-VPN: OpenVPN  
-CICD: GitLab-CI, Jenkins  
-Local Registry: Registry  
-Manage:  Portainer, Docker Compose  
-Reverse Proxy: Nginx proxy manager  
+* ⏱️ **Reduced infrastructure provisioning time from several hours to ~20 minutes**
+* ✅ **Eliminated manual Kubernetes deployment steps** — all workloads are declared in Git and auto-reconciled
+* Stack: Terraform, Ansible, K3s, Flux CD, Istio, GitHub Actions, Prometheus, Grafana, Kiali, Vector, Quickwit, Garage (S3), NFS, cert-manager
 
-### Kubernetes component.
-#### Add on
-Runtime: CRI-O  
-Ingress: Nginx Ingress controller  
-Networking: Cilium  
-LoadBalancer: MetalLB  
-Storage class: NFS  
-#### Tools
-Manage: Portainer-agent, Kubectl, Lens  
-GitOps: Argo-cd  
-Monitoring: Grafana  
-Code Quality: Sonarqube  
-#### PROD
-PHPmyadmin  
-MariaDB  
-Rust  
-Golang  
-Spring-boot  
-NextJS  
-Django  
+### [Fleet Infra — Flux CD GitOps](https://github.com/traipoap/fleet-infra)
+GitOps source of truth for a **K3s HA cluster (3 masters)** — all Kubernetes state declared in Git and continuously reconciled by Flux CD.
+
+* 🔐 **TLS automation with cert-manager** (self-signed for dev, Let's Encrypt configured for prod)
+* 📜 **Centralized logging pipeline**: Vector → Quickwit, with Grafana dashboards
+* 📊 **Weave GitOps dashboard** for at-a-glance cluster health
+* 🔄 **Multi-environment promotion design** (dev → staging → prod)
+* Stack: Flux CD, Kustomize, Helm, Istio Gateway API, cert-manager, Vector, Quickwit
+
+## Contact
+
+* 🌍 Based in Nonthaburi, Thailand
+* ✉️ [traipoap@hotmail.com](mailto:traipoap@hotmail.com)
+* 💼 Open to Platform / DevOps Engineer roles
