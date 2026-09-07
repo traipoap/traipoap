@@ -1,6 +1,6 @@
 Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif)My name is Traipoap.
 
-# Platform / DevOps Engineer
+# DevOps Engineer
 
 I design, build, and operate **Kubernetes platforms** where everything — infrastructure, configuration, and applications — is declared in Git and deployed automatically (GitOps). In practice, this means:
 
@@ -40,11 +40,11 @@ GitOps source of truth for a **K3s HA cluster (3 masters)** — all Kubernetes s
 * 🔐 **TLS automation with cert-manager** (self-signed for dev, Let's Encrypt configured for prod)
 * 📜 **Centralized logging pipeline**: Vector → Quickwit, with Grafana dashboards
 * 📊 **Weave GitOps dashboard** for at-a-glance cluster health
-* 🔄 **Multi-environment promotion design** (dev → staging → prod)
+* 🔄 **Multi-environment promotion design** (staging → prod)
 * Stack: Flux CD, Kustomize, Helm, Istio Gateway API, cert-manager, Vector, Quickwit
 
 ## Contact
 
 * 🌍 Based in Nonthaburi, Thailand
 * ✉️ [traipoap@hotmail.com](mailto:traipoap@hotmail.com)
-* 💼 Open to Platform / DevOps Engineer roles
+* 💼 Open to DevOps Engineer roles
