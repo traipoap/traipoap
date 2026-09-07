@@ -24,7 +24,6 @@ I design, build, and operate **Kubernetes platforms** where everything — infra
 
 * 🎓 **CKA** — [Certified Kubernetes Administrator](https://www.credly.com/badges/e592b729-06ce-4999-8686-92baf76c8662/public_url)
 * 🎓 **CKAD** — [Certified Kubernetes Application Developer](https://www.credly.com/badges/4377148c-cbda-48ee-a063-6880e0086fd8/public_url)
-* 📚 **AWS SAA** — AWS Solutions Architect Associate *(in progress)*
 
 ## Selected Projects
 
