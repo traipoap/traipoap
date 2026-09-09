@@ -37,9 +37,9 @@ End-to-end platform automation: Terraform provisions the VMs, Ansible installs a
 ### [Fleet Infra — Flux CD GitOps](https://github.com/traipoap/fleet-infra)
 GitOps source of truth for a **K3s HA cluster (3 masters)** — all Kubernetes state declared in Git and continuously reconciled by Flux CD.
 
-* 🔐 **TLS automation with cert-manager** (self-signed for dev, Let's Encrypt configured for prod)
+* 🔐 **TLS automation with cert-manager** (self-signed)
 * 📜 **Centralized logging pipeline**: Vector → Quickwit, with Grafana dashboards
-* 📊 **Weave GitOps dashboard** for at-a-glance cluster health
+* 📊 **Flux Web UI** for at-a-glance cluster health and GitOps management
 * 🔄 **Multi-environment promotion design** (staging → prod)
 * Stack: Flux CD, Kustomize, Helm, Istio Gateway API, cert-manager, Vector, Quickwit
 

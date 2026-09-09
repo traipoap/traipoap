@@ -4,7 +4,7 @@ GitHub: https://github.com/traipoap | Linkedin: https://www.linkedin.com/in/trai
 DevOps Engineer
 
 ABOUT ME
-Network administrator with 4+ years of enterprise cloud & network operations (IaaS/PaaS) experience in a national telco cloud environment, now transitioning to DevOps. CKA / CKAD certified, with a proven record in SLA-based incident response (92% MTTR reduction), change management, and vendor coordination. Hands-on experience designing and operating a fully automated Kubernetes platform — Terraform, Ansible, K3s (HA), FluxCD, Istio, GitHub Actions — reducing cluster provisioning from hours to ~20 minutes with zero manual deployment steps.
+Network administrator with 4+ years of enterprise cloud & network operations (IaaS/PaaS) experience in a national telco cloud environment, now transitioning to DevOps. CKA- and CKAD-certified, with a proven record in SLA-based incident response (92% MTTR reduction), change support, and vendor coordination. Hands-on experience designing and operating an automated Kubernetes platform — Terraform, Ansible, K3s (HA), FluxCD, Istio, GitHub Actions — reducing cluster provisioning from hours to ~20 minutes with zero manual deployment steps.
 
 TECHNICAL SKILLS
 Cloud Native & GitOps: Kubernetes (K3s, HA/etcd), Docker, Helm, Kustomize, Istio (Service Mesh, Gateway API), FluxCD (GitRepository, Kustomization, ImageAutomation), cert-manager
@@ -17,23 +17,24 @@ Certified Kubernetes Administrator (CKA) | Linux Foundation | Valid: Mar 2026 �
 Certified Kubernetes Application Developer (CKAD) | Linux Foundation | Valid: July 2026 – July 2028
 
 KEY DEVOPS & AUTOMATION PROJECTS
-K3s GitOps Platform on Proxmox: In Progress
+K3s GitOps Platform on Proxmox
 Infrastructure & Cluster Automation: https://github.com/traipoap/gitops-platform
 GitOps Fleet Management: https://github.com/traipoap/fleet-infra
 gitops-platform:
 Designed an end-to-end automated Kubernetes platform: Terraform (template-clone VM provisioning, count-driven cluster scaling) → Ansible (idempotent roles, kernel tuning) → K3s HA (3 masters, embedded etcd) → Istio Service Mesh → FluxCD GitOps.
 Reduced infrastructure provisioning time from several hours to ~20 minutes; eliminated all manual Kubernetes deployment steps.
-Built CI/CD pipelines with GitHub Actions: lint/test → build image → push to registry → auto-update GitOps repo → FluxCD deploys.
+Built CI/CD pipelines with GitHub Actions: security gate (Gitleaks + SonarQube) → build image (path-filtered) → Trivy vulnerability scan → push to GHCR → FluxCD auto-deploys.
 Implemented observability: Prometheus, Grafana, Kiali, and a centralized Vector → Quickwit logging pipeline.
-Delivered two-tier storage (NFS RWX + Garage S3), HAProxy/Keepalived load balancing, and cert-manager TLS automation (self-signed dev, Let’s Encrypt HTTP-01/DNS-01 prod).
+Delivered two-tier storage (NFS RWX + Garage S3), HAProxy/Keepalived load balancing, and cert-manager-based TLS automation with a private CA.
 Documented 12 architecture decisions + deployment and troubleshooting runbooks.
 
 fleet-infra:
 Operate the GitOps source of truth for a K3s HA cluster — all state in Git, continuously reconciled by FluxCD with self-healing configuration drift.
-Designed an ArtifactGenerator-based layout cleanly separating infrastructure controllers (Helm), configs (YAML), and per-environment app overlays (base + staging).
+Designed an ArtifactGenerator-based layout cleanly separating infrastructure controllers (Helm), configs (YAML), and per-environment app overlays (base + staging + production).
 Implemented External Secrets Operator + AWS SecretsManager — JWT, registry, and storage credentials synced into the cluster, never stored in Git.
 Set up FluxCD Image Automation (ImageRepository + semver ImagePolicy) — new images auto-detected, tags updated, and auto-deployed.
-Added manifest validation (validate.sh) and cluster-wide resource guardrails (LimitRange + resource-request requirements).
+Added manifest validation (validate.sh), LimitRange defaults across all namespaces, and a Kyverno cluster policy that injects missing resource requests/limits.
+Deployed Flux Web UI (flux-operator) for at-a-glance GitOps visibility, running credential-free in server-only mode.
 
 EXPERIENCE
 Network Administrator (IaaS/PaaS Support) | Jan 2022 - Present
