@@ -40,7 +40,7 @@ GitOps source of truth for a **K3s HA cluster (3 masters)** — all Kubernetes s
 * 🔐 **TLS automation with cert-manager** (self-signed)
 * 📜 **Centralized logging pipeline**: Vector → Quickwit, with Grafana dashboards
 * 📊 **Flux Web UI** for at-a-glance cluster health and GitOps management
-* 🔄 **Multi-environment promotion design** (staging → prod)
+* 🔄 **Multi-environment promotion design** (base → staging → prod)
 * Stack: Flux CD, Kustomize, Helm, Istio Gateway API, cert-manager, Vector, Quickwit
 
 ## Contact

@@ -821,7 +821,7 @@ kubectl get events -n <namespace> --sort-by=.metadata.creationTimestamp
 - Kyverno policy enforcement (required labels, resource quotas, disallow privileged containers)
 - NetworkPolicies for namespace isolation (default-deny posture)
 - External Secrets Operator — keep secrets **out of the GitOps repo** entirely
-- Multi-environment promotion: dev → staging → production with stacked GitOps configs and per-env gate
+- Multi-environment promotion: base → staging → prod with stacked GitOps configs and per-env gate
 
 **Pipeline & supply chain**
 - OIDC (workload identity) for GHCR push — eliminate the long-lived registry PAT

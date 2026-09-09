@@ -468,6 +468,6 @@ flux bootstrap github \
 - [ ] Add NetworkPolicies for namespace isolation
 - [ ] Configure Flux alerts (Slack/Email) via `Alert` resources
 - [x] Add Kyverno/OPA policies for security enforcement
-- [ ] Multi-environment promotion (staging → production)
+- [x] Multi-environment promotion (base → staging → production)
 - [ ] Add Velero backup for etcd + PVCs
 - [x] Add image vulnerability scanning in CI pipeline
