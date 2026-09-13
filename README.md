@@ -1,10 +1,8 @@
 Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif)My name is Traipoap.
 
-# DevOps Engineer
-
 I design, build, and operate **Kubernetes platforms** where everything — infrastructure, configuration, and applications — is declared in Git and deployed automatically (GitOps). In practice, this means:
 
-* ⏱️ A full platform (VMs, K3s cluster, service mesh, monitoring, logging) is provisioned in **~20 minutes** instead of several hours
+* ⏱️ A full platform (VMs, K3s cluster, service mesh, monitoring, logging) is provisioned in **under an hour** instead of several hours
 * ✅ **No manual Kubernetes deployment steps** — the cluster continuously reconciles itself to the state declared in Git
 * 🔁 A complete, repeatable rebuild of the environment from a single repository
 
@@ -14,7 +12,7 @@ I design, build, and operate **Kubernetes platforms** where everything — infra
 |---|---|
 | **Infrastructure as Code** (Terraform, Ansible) | VMs, OS setup, and cluster installs are created from code — no manual clicks |
 | **GitOps** (Flux CD, Kustomize, Helm) | The cluster stays in sync with Git automatically; configuration drift is detected and corrected |
-| **CI/CD** (GitHub Actions, Docker) | Push code → lint/test → build image → deploy, fully automated |
+| **CI/CD** (GitHub Actions, Docker) | Push code → security gate → build image → deploy, fully automated |
 | **Kubernetes & service mesh** (K3s, Istio, Gateway API) | High-availability clusters with routing, TLS, and traffic visibility |
 | **Observability** (Prometheus, Grafana, Kiali, Vector, Quickwit) | Metrics, dashboards, service-mesh traffic views, and centralized log search |
 | **Storage & security** (NFS, Garage S3, cert-manager, RBAC) | Persistent + S3-compatible storage, automated TLS certificates, access control |
@@ -30,7 +28,7 @@ I design, build, and operate **Kubernetes platforms** where everything — infra
 ### [K3s GitOps Platform on Proxmox](https://github.com/traipoap/gitops-platform)
 End-to-end platform automation: Terraform provisions the VMs, Ansible installs and configures the K3s cluster, and Flux CD then manages everything from Git — including the CI/CD pipeline, monitoring, centralized logging, and S3 object storage.
 
-* ⏱️ **Reduced infrastructure provisioning time from several hours to ~20 minutes**
+* ⏱️ **Reduced infrastructure provisioning time from several hours to under an hour**
 * ✅ **Eliminated manual Kubernetes deployment steps** — all workloads are declared in Git and auto-reconciled
 * Stack: Terraform, Ansible, K3s, Flux CD, Istio, GitHub Actions, Prometheus, Grafana, Kiali, Vector, Quickwit, Garage (S3), NFS, cert-manager
 
