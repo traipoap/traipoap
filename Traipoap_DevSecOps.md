@@ -15,7 +15,7 @@ DevSecOps engineer with 4+ years of Network administration (IaaS/PaaS) experienc
 - **Scripting:** Go, Bash, Python
 - **Cloud & Storage:** IaaS/PaaS cloud operations, AWS (SecretsManager), S3-compatible object storage (Garage)
 - **Monitoring & Logging:** Prometheus, Grafana, Kiali, Vector, Quickwit, Zabbix
-- **Networking & Security:** TCP/IP, DNS, Routing, load balancing, firewall policy, RBAC
+- **Networking & Security:** TCP/IP, DNS, Routing, load balancing, firewall policy
 
 ## CERTIFICATIONS
 - **Certified Kubernetes Administrator (CKA)** | Linux Foundation | Valid: Mar 2026 – Mar 2028

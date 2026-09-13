@@ -4,20 +4,20 @@ GitHub: https://github.com/traipoap | Linkedin: https://www.linkedin.com/in/trai
 DevOps Engineer
 
 ABOUT ME
-DevOps engineer with 4+ years of Network administration (IaaS/PaaS) experience in a national telco cloud environment, focused on automated Kubernetes delivery. CKA & CKAD certified, Designed and operate an end-to-end GitOps platform — Terraform, Ansible, K3s, Istio, FluxCD, GitHub Actions — with security built into the pipeline cutting cluster provisioning from hours to under an hour with zero manual deployment steps.
+DevOps engineer with 4+ years of Network administration (IaaS/PaaS) experience in a national telco cloud environment, focused on automated Kubernetes delivery. CKA & CKAD certified, Designed and operate an end-to-end GitOps platform - Terraform, Ansible, K3s, Istio, FluxCD, GitHub Actions - with security built into the pipeline cutting cluster provisioning from days to under an hour with zero manual deployment steps.
 
 TECHNICAL SKILLS
 Cloud Native & GitOps: Kubernetes (K3s, HA/etcd), Docker, Helm, Kustomize, Istio (Service Mesh, Gateway API), FluxCD (GitRepository, Kustomization, ImageAutomation), cert-manager
-IaC & Automation: Terraform, Ansible, Proxmox VE, VMware vSphere, OpenStack, Python (AI Hackathon), Bash, Go
+IaC & Automation: Terraform, Ansible, Proxmox VE, VMware vSphere, OpenStack, Python, Bash, Go
 CI/CD & Observability: GitHub Actions, Container Registry, Prometheus, Grafana, Kiali, Vector, Quickwit, Zabbix
-Networking & Security: Linux, TCP/IP, BGP, Cisco ACI, NSX-T, HAProxy, Nginx, RBAC, NetworkPolicy
+Networking & Security: Linux, TCP/IP, BGP, HAProxy, Nginx, RBAC, NetworkPolicy
 
 CERTIFICATIONS
 Certified Kubernetes Administrator (CKA) | Linux Foundation | Valid: Mar 2026 – Mar 2028
 Certified Kubernetes Application Developer (CKAD) | Linux Foundation | Valid: July 2026 – July 2028
 
 KEY DEVOPS & AUTOMATION PROJECTS
-K3s GitOps Platform on Proxmox
+K3s GitOps Platform on Proxmox: In progress
 Infrastructure & Cluster Automation: https://github.com/traipoap/gitops-platform
 GitOps Fleet Management: https://github.com/traipoap/fleet-infra
 gitops-platform:
@@ -56,5 +56,4 @@ Thai: Native
 English: Intermediate (Technical Reading & Writing)
 
 ADDITIONAL INFORMATION
-Hackathon: GATI_Team
-Received the "The WINNER AWARD", AgTech AI Incubation 2023
+Hackathon: GATI_Team — Received the "The WINNER AWARD", AgTech AI Incubation 2023
