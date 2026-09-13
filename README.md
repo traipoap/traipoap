@@ -5,6 +5,7 @@ I design, build, and operate **Kubernetes platforms** where everything — infra
 * ⏱️ A full platform (VMs, K3s cluster, service mesh, monitoring, logging) is provisioned in **under an hour** instead of several hours
 * ✅ **No manual Kubernetes deployment steps** — the cluster continuously reconciles itself to the state declared in Git
 * 🔁 A complete, repeatable rebuild of the environment from a single repository
+* 🔒 **Security built into the pipeline** — secret scanning, SAST, and container image vulnerability scanning (caught & eliminated 67 critical/high-severity vulnerabilities)
 
 ## What I do
 
@@ -12,10 +13,10 @@ I design, build, and operate **Kubernetes platforms** where everything — infra
 |---|---|
 | **Infrastructure as Code** (Terraform, Ansible) | VMs, OS setup, and cluster installs are created from code — no manual clicks |
 | **GitOps** (Flux CD, Kustomize, Helm) | The cluster stays in sync with Git automatically; configuration drift is detected and corrected |
-| **CI/CD** (GitHub Actions, Docker) | Push code → security gate → build image → deploy, fully automated |
+| **CI/CD & DevSecOps** (GitHub Actions, Docker) | Push code → security gate (Gitleaks, SonarQube SAST, Trivy image scan) → build image → deploy, fully automated |
 | **Kubernetes & service mesh** (K3s, Istio, Gateway API) | High-availability clusters with routing, TLS, and traffic visibility |
 | **Observability** (Prometheus, Grafana, Kiali, Vector, Quickwit) | Metrics, dashboards, service-mesh traffic views, and centralized log search |
-| **Storage & security** (NFS, Garage S3, cert-manager, RBAC) | Persistent + S3-compatible storage, automated TLS certificates, access control |
+| **Security & storage** (NFS, Garage S3, cert-manager, RBAC, NetworkPolicy, Kyverno) | Persistent + S3-compatible storage, automated TLS, access control & admission policies |
 | **Application operations** (Go, JS) | Operate polyglot stacks — Go APIs, Astro/JS frontends |
 
 ## Certifications
@@ -30,6 +31,7 @@ End-to-end platform automation: Terraform provisions the VMs, Ansible installs a
 
 * ⏱️ **Reduced infrastructure provisioning time from several hours to under an hour**
 * ✅ **Eliminated manual Kubernetes deployment steps** — all workloads are declared in Git and auto-reconciled
+* 🔒 **Security-first CI/CD gate** (Gitleaks, SonarQube SAST, Trivy) — caught & eliminated **67 critical & high-severity** container vulnerabilities
 * Stack: Terraform, Ansible, K3s, Flux CD, Istio, GitHub Actions, Prometheus, Grafana, Kiali, Vector, Quickwit, Garage (S3), NFS, cert-manager
 
 ### [Fleet Infra — Flux CD GitOps](https://github.com/traipoap/fleet-infra)
@@ -45,4 +47,4 @@ GitOps source of truth for a **K3s HA cluster (3 masters)** — all Kubernetes s
 
 * 🌍 Based in Nonthaburi, Thailand
 * ✉️ [traipoap@hotmail.com](mailto:traipoap@hotmail.com)
-* 💼 Open to DevOps Engineer roles
+* 💼 Open to DevOps / DevSecOps Engineer roles

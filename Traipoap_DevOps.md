@@ -4,11 +4,11 @@ GitHub: https://github.com/traipoap | Linkedin: https://www.linkedin.com/in/trai
 DevOps Engineer
 
 ABOUT ME
-Network administrator with 4+ years of enterprise cloud & network operations (IaaS/PaaS) experience in a national telco cloud environment, now transitioning to DevOps. CKA- and CKAD-certified, with a proven record in SLA-based incident response (92% MTTR reduction), change support, and vendor coordination. Hands-on experience designing and operating an automated Kubernetes platform — Terraform, Ansible, K3s (HA), FluxCD, Istio, GitHub Actions — reducing cluster provisioning from hours to ~20 minutes with zero manual deployment steps.
+DevOps engineer with 4+ years of Network administration (IaaS/PaaS) experience in a national telco cloud environment, focused on automated Kubernetes delivery. CKA & CKAD certified, Designed and operate an end-to-end GitOps platform — Terraform, Ansible, K3s, Istio, FluxCD, GitHub Actions — with security built into the pipeline cutting cluster provisioning from hours to under an hour with zero manual deployment steps.
 
 TECHNICAL SKILLS
 Cloud Native & GitOps: Kubernetes (K3s, HA/etcd), Docker, Helm, Kustomize, Istio (Service Mesh, Gateway API), FluxCD (GitRepository, Kustomization, ImageAutomation), cert-manager
-IaC & Automation: Terraform, Ansible, Proxmox VE, VMware vSphere, OpenStack, Python (AI Hackathon), Bash, Go (backend)
+IaC & Automation: Terraform, Ansible, Proxmox VE, VMware vSphere, OpenStack, Python (AI Hackathon), Bash, Go
 CI/CD & Observability: GitHub Actions, Container Registry, Prometheus, Grafana, Kiali, Vector, Quickwit, Zabbix
 Networking & Security: Linux, TCP/IP, BGP, Cisco ACI, NSX-T, HAProxy, Nginx, RBAC, NetworkPolicy
 
@@ -22,11 +22,11 @@ Infrastructure & Cluster Automation: https://github.com/traipoap/gitops-platform
 GitOps Fleet Management: https://github.com/traipoap/fleet-infra
 gitops-platform:
 Designed an end-to-end automated Kubernetes platform: Terraform (template-clone VM provisioning, count-driven cluster scaling) → Ansible (idempotent roles, kernel tuning) → K3s HA (3 masters, embedded etcd) → Istio Service Mesh → FluxCD GitOps.
-Reduced infrastructure provisioning time from several hours to ~20 minutes; eliminated all manual Kubernetes deployment steps.
+Reduced infrastructure provisioning time from several hours to under an hour; eliminated all manual Kubernetes deployment steps.
 Built CI/CD pipelines with GitHub Actions: security gate (Gitleaks + SonarQube) → build image (path-filtered) → Trivy vulnerability scan → push to GHCR → FluxCD auto-deploys.
 Implemented observability: Prometheus, Grafana, Kiali, and a centralized Vector → Quickwit logging pipeline.
 Delivered two-tier storage (NFS RWX + Garage S3), HAProxy/Keepalived load balancing, and cert-manager-based TLS automation with a private CA.
-Documented 12 architecture decisions + deployment and troubleshooting runbooks.
+Documented 16 architecture decisions + deployment and troubleshooting runbooks.
 
 fleet-infra:
 Operate the GitOps source of truth for a K3s HA cluster — all state in Git, continuously reconciled by FluxCD with self-healing configuration drift.
