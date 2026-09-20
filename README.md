@@ -17,7 +17,7 @@ I design, build, and operate **Kubernetes platforms** where everything — infra
 | **Kubernetes & service mesh** (K3s, Istio, Gateway API) | High-availability clusters with routing, TLS, and traffic visibility |
 | **Observability** (Prometheus, Grafana, Kiali, Vector, Quickwit) | Metrics, dashboards, service-mesh traffic views, and centralized log search |
 | **Security & storage** (NFS, Garage S3, cert-manager, RBAC, NetworkPolicy, Kyverno) | Persistent + S3-compatible storage, automated TLS, access control & admission policies |
-| **Application operations** (Go, JS) | Operate polyglot stacks — Go APIs, Astro/JS frontends |
+| [**Application operations** (Go, JS)](https://app.traipoap.com/) | Operate polyglot stacks — Go APIs, Astro/JS frontends |
 
 ## Certifications
 
