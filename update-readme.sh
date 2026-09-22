@@ -1,2 +1,3 @@
-cp ../gitops-platform/README.md README-gitops-platform.md &&
-cp ../fleet-infra/README.md README-fleet-infra.md
+cp ../infra/README.md README-infra.md &&
+cp ../app/README.md README-app.md &&
+cp ../gitops/README.md README-gitops.md
