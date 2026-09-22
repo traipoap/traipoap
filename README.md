@@ -42,14 +42,14 @@ I design, build, and operate **Kubernetes platforms** where everything — infra
 * 🧱 Documented trade-offs: one super node hosts LB + storage + S3 (single point of failure — mitigated by NFS/Garage backups) with a scale-out path in the architecture decisions
 * Stack: Terraform, Ansible, Proxmox VE, K3s, Istio, NFS, Garage (S3), cloud-init
 
-### [App — Log-Search Platform](https://github.com/traipoap/app) · live: [app.traipoap.com](https://app.traipoap.com)
+### [App — Log-Search Platform](https://github.com/traipoap/app)
 *Go/GIN + Astro — the application, with a security-first release pipeline*
 
 * 🔒 **Security gates on every build**: Gitleaks (secret scan) + SonarQube (SAST) → build → **Trivy image scan (CRITICAL/HIGH gate, SARIF)** → GHCR — **caught & eliminated 67 critical/high-severity vulnerabilities**
 * ⚡ Go API (JWT auth, log search, CSV export) + Astro/JS dashboard
 * Stack: Go (Gin), Astro/JS, Docker, GitHub Actions, Gitleaks, SonarQube, Trivy, GHCR
 
-### [GitOps — Flux CD Repository](https://github.com/traipoap/gitops) · live: [flux-web.traipoap.com](https://flux-web.traipoap.com)
+### [GitOps — Flux CD Repository](https://github.com/traipoap/gitops)
 *Source of truth for the cluster — verified images from the App repo land here and are deployed automatically*
 
 * 🔄 **Flux CD** for the K3s cluster (embedded etcd; HA-ready: masters auto-join via etcd token) — continuous reconciliation, self-healing drift; **Image Automation** (semver policy → auto-commit → deploy)
