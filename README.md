@@ -19,10 +19,16 @@ I design, build, and operate **Kubernetes platforms** where everything — infra
 | **Security & storage** (NFS, Garage S3, cert-manager, RBAC, NetworkPolicy, Kyverno) | Persistent + S3-compatible storage, automated TLS, access control & admission policies |
 | **Application operations** (Go, JS) | Operate polyglot stacks — Go APIs, Astro/JS frontends |
 
-## Certifications
+## 🟢 Live Demos
+| Service | URL |
+|---|---|
+| Log-Search App | https://app.traipoap.com |
+| Flux Web (GitOps UI) | https://flux-web.traipoap.com |
+| Grafana (Observability) | https://grafana.traipoap.com |
+| Kiali (Service Mesh) | https://kiali.traipoap.com |
+| SonarQube (SAST) | https://sonar.traipoap.com |
 
-* 🎓 **CKA** — [Certified Kubernetes Administrator](https://www.credly.com/badges/e592b729-06ce-4999-8686-92baf76c8662/public_url)
-* 🎓 **CKAD** — [Certified Kubernetes Application Developer](https://www.credly.com/badges/4377148c-cbda-48ee-a063-6880e0086fd8/public_url)
+> New service = 1 Gateway host + 1 Certificate + 1 HTTPRoute — TLS auto-issued by cert-manager, deployed via Flux from the [gitops repo](https://github.com/traipoap/gitops)
 
 ## Selected Projects
 
@@ -51,6 +57,11 @@ I design, build, and operate **Kubernetes platforms** where everything — infra
 * 📜 **Vector → Quickwit** centralized logging + Grafana datasources, **Flux Web UI** for cluster health
 * 🚦 **base → staging → production** overlays with per-cluster bootstrapping
 * Stack: Flux CD, Kustomize, Helm, Istio Gateway API, cert-manager, External Secrets, Kyverno, Vector, Quickwit
+
+## Certifications
+
+* 🎓 **CKA** — [Certified Kubernetes Administrator](https://www.credly.com/badges/e592b729-06ce-4999-8686-92baf76c8662/public_url)
+* 🎓 **CKAD** — [Certified Kubernetes Application Developer](https://www.credly.com/badges/4377148c-cbda-48ee-a063-6880e0086fd8/public_url)
 
 ## Contact
 
