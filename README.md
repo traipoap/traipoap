@@ -26,7 +26,7 @@ I design, build, and operate **Kubernetes platforms** where everything — infra
 | Flux Web (GitOps UI) | https://flux-web.traipoap.com |
 | Grafana (Observability) | https://grafana.traipoap.com |
 | Kiali (Service Mesh) | https://kiali.traipoap.com |
-| SonarQube (SAST) | https://sonar.traipoap.com |
+| SonarQube (SAST) | https://sonarqube.traipoap.com |
 
 > New service = 1 Gateway host + 1 Certificate + 1 HTTPRoute — TLS auto-issued by cert-manager, deployed via Flux from the [gitops repo](https://github.com/traipoap/gitops)
 
