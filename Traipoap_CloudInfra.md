@@ -66,7 +66,7 @@ Support and operate network and infrastructure services within a national teleco
 - Delivered load balancing, NFS persistent storage, and Garage S3 object storage; resource optimization via LimitRange and Kyverno CPU/memory defaults.
 - Documented **14 architecture decisions** (K3s vs kubeadm, GitOps vs kubectl, two-tier storage) plus backup/restore design (etcd snapshots, PVCs, S3 data).
 
-### 2. Log-Search Platform (App) · [github.com/traipoap/app](https://github.com/traipoap/app) · Live: [app.traipoap.com](https://app.traipoap.com)
+### 2. Log-Search Platform (App) · [github.com/traipoap/app](https://github.com/traipoap/app)
 **Stack:** Go (Gin) · Astro/JS · Docker · GitHub Actions · Gitleaks · SonarQube · Trivy · GHCR
 
 - Built and run a log-search platform **in production** — Go API (JWT auth, Quickwit search, CSV export) + Astro/JS dashboard.
