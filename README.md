@@ -67,4 +67,5 @@ I design, build, and operate **Kubernetes platforms** where everything — infra
 
 * 🌍 Based in Nonthaburi, Thailand
 * ✉️ [traipoap@hotmail.com](mailto:traipoap@hotmail.com)
-* 💼 Open to **DevOps / DevSecOps / Cloud & Infrastructure / Kubernetes** roles — full-time, hybrid or remote
+* 🔗 [LinkedIn](https://www.linkedin.com/in/traipoap-hunthong)
+* 💼 Open to **DevOps / Cloud & Infrastructure Engineer** roles — full-time, hybrid or remote
