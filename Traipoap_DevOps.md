@@ -46,7 +46,7 @@ Currently moving into DevOps, with a self-hosted platform to back it up: design,
 
 ### 1. infra — Terraform + Ansible · [github.com/traipoap/infra](https://github.com/traipoap/infra)
 
-- Built an end-to-end automated K3s platform: Terraform (template-clone VMs, count-driven node scaling, HCP remote state — renders the Ansible inventory + HAProxy config from state) → Ansible (6 idempotent playbooks, kernel tuning) → K3s (embedded etcd; HA-capable — extra masters auto-join via shared token; deployed 1 master + 1 worker, sized to a 16 GB lab host) → Istio (ambient profile) + Gateway API → FluxCD bootstrap from GitHub.
+- Built an automated K3s platform: Terraform (template-clone VMs, count-driven node scaling, HCP remote state — renders the Ansible inventory + HAProxy config from state) → Ansible (6 idempotent playbooks, kernel tuning) → K3s (embedded etcd; HA-capable — extra masters auto-join via shared token; deployed 1 master + 1 worker, sized to a 16 GB lab host) → Istio (ambient profile) + Gateway API → FluxCD bootstrap from GitHub.
 - Provisions the full platform from zero in **under an hour** — super-node (HAProxy L7 LB + syslog relay fan-out, NFS, Garage S3) + K3s master + worker — fully repeatable; `terraform destroy` tears it down.
 - Multi-runtime container support: crun as default runtime, youki exposed as a Kubernetes `RuntimeClass`.
 - Documented **14 architecture decisions** + deployment and troubleshooting runbook.

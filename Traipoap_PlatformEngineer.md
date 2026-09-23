@@ -9,7 +9,7 @@
 
 ## Summary
 
-Platform Engineer building an end-to-end self-hosted developer platform — infrastructure as code, GitOps delivery, and a golden path for new workloads — structured like a real platform team across 3 repositories (infra / app / gitops) with fully automated handoff.
+Platform Engineer building an automated self-hosted developer platform — infrastructure as code, GitOps delivery, and a golden path for new workloads — structured like a real platform team across 3 repositories (infra / app / gitops) with fully automated handoff.
 
 4+ years of network and cloud operations at a national telco — 99.99% availability, 92% MTTR reduction (60→5 min). CKA & CKAD certified. Platform provisioned from zero in under an hour; zero manual deployment steps.
 
@@ -52,13 +52,13 @@ Platform Engineer building an end-to-end self-hosted developer platform — infr
 
 ### 2. app — Golden-path application · [github.com/traipoap/app](https://github.com/traipoap/app)
 
-- Built and run a log-search platform **on the platform it was built with** (dogfooding), self-hosted in a personal production environment ([app.traipoap.com](https://app.traipoap.com)) — Go API (JWT auth, Quickwit search, CSV export) + Astro/JS dashboard.
+- Built and run a log-search platform — Go API (JWT auth, Quickwit search, CSV export) + Astro/JS dashboard — **self-hosted on the same platform in a personal production environment** ([app.traipoap.com](https://app.traipoap.com)) (dogfooding).
 - **Golden-path release pipeline** on GitHub Actions: Gitleaks secret scan + SonarQube SAST gate → path-filtered image build → Trivy vulnerability scan (CRITICAL/HIGH gate, SARIF) → push to GHCR → FluxCD auto-deploy — **zero manual deployment steps**.
 - **Platform quality policy:** enforced a "no critical/high in production" gate — caught and eliminated **67 critical & high-severity** container vulnerabilities.
 
 ### 3. gitops — Platform control plane · [github.com/traipoap/gitops](https://github.com/traipoap/gitops)
 
-- **GitOps source of truth** for the K3s cluster — all state in Git, continuously reconciled by FluxCD with self-healing configuration drift.
+- **GitOps source of truth** for the K3s cluster — all state in Git, continuously reconciled by FluxCD, self-healing from configuration drift.
 - **Multi-environment foundation:** base + staging + production overlays for every new workload; **self-service for new services** — 1 Gateway host + 1 cert-manager certificate + 1 HTTPRoute, TLS auto-issued.
 - **Secrets never in Git:** External Secrets Operator + AWS SecretsManager — JWT, registry, and storage credentials synced into the cluster.
 - **Platform guardrails:** Kyverno admission policies + LimitRange defaults across all namespaces; manifest validation (flux-schema).
@@ -97,4 +97,4 @@ Platform Engineer building an end-to-end self-hosted developer platform — infr
 
 ## Additional Information
 
-- Hackathon: GATI_Team — received the **"WINNER AWARD"**, AgTech AI Incubation 2023
+- Hackathon — **Winner Award**, AgTech AI Incubation 2023 (Team GATI)

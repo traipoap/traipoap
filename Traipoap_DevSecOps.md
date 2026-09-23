@@ -44,7 +44,7 @@ Running self-hosted in a personal production environment ([app.traipoap.com](htt
 
 ### 1. infra — Terraform + Ansible · [github.com/traipoap/infra](https://github.com/traipoap/infra)
 
-- Built an end-to-end automated K3s platform: Terraform (template-clone VMs, count-driven scaling, HCP remote state) → Ansible (6 idempotent playbooks) → K3s (embedded etcd, HA-capable) → Istio (ambient) + Gateway API → FluxCD bootstrap.
+- Built an automated K3s platform: Terraform (template-clone VMs, count-driven scaling, HCP remote state) → Ansible (6 idempotent playbooks) → K3s (embedded etcd, HA-capable) → Istio (ambient) + Gateway API → FluxCD bootstrap.
 - **Secrets never in git:** Terraform reads gitignored `secrets.auto.tfvars`; Ansible reads environment variables.
 - **Hardened edge:** Garage S3 admin API bound to loopback only under a sandboxed systemd unit (`ProtectSystem=strict`, `NoNewPrivileges`); **TLS 1.2+ enforced** on HAProxy; narrowly-scoped Flux GitHub token (single repo, read/write).
 - Provisions the full platform (super-node: HAProxy L7 + syslog relay, NFS, Garage S3; K3s master; worker) from zero in **under an hour**; `terraform destroy` tears it down. Documented **14 architecture decisions** + troubleshooting runbook.
