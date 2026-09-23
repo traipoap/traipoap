@@ -23,7 +23,7 @@ Currently moving into DevOps, with a self-hosted platform to back it up: design,
 |---|---|
 | **Linux & Scripting** | Debian, Ubuntu, Bash, Python, Go |
 | **CI/CD Pipelines** | GitHub Actions, FluxCD |
-| **Containerization & Orchestration** | Docker, Podman, Kubernetes, CCE, Istio |
+| **Containerization & Orchestration** | Docker, Podman, Kubernetes, Huawei CCE, Istio |
 | **Infrastructure as Code (IaC)** | Terraform, Ansible |
 | **Cloud Platforms** | AWS, VMware vSphere, OpenStack, Proxmox VE |
 | **Monitoring & Observability** | Zabbix, Prometheus, Grafana, Kiali, Vector, Quickwit |
@@ -92,7 +92,7 @@ Currently moving into DevOps, with a self-hosted platform to back it up: design,
 ## Languages
 
 - **Thai** — Native
-- **English** — Intermediate
+- **English** — Working proficiency
 
 ---
 

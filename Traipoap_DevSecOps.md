@@ -22,10 +22,10 @@ Running self-hosted in a personal production environment ([app.traipoap.com](htt
 | Category | Skills |
 |---|---|
 | **Security in CI/CD Pipelines** | Gitleaks, SonarQube, Trivy |
-| **DevOps & Infrastructure as Code (IaC)** | Docker, Podman, Kubernetes, CCE, Istio, Terraform, Ansible, FluxCD, GitHub Actions, AWS |
+| **DevOps & Infrastructure as Code (IaC)** | Docker, Podman, Kubernetes, Huawei CCE, Istio, Terraform, Ansible, FluxCD, GitHub Actions, AWS |
 | **Coding and Scripting** | Bash, Python, Go |
 | **Linux & Monitoring** | Debian, Ubuntu, Zabbix, Prometheus, Grafana |
-| **Cybersecurity & Threat Modeling** | WAZUH |
+| **Cybersecurity & Threat Modeling** | RBAC, NetworkPolicy |
 
 ---
 
@@ -90,7 +90,7 @@ Running self-hosted in a personal production environment ([app.traipoap.com](htt
 ## Languages
 
 - **Thai** — Native
-- **English** — Intermediate
+- **English** — Working proficiency
 
 ---
 

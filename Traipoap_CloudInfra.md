@@ -23,11 +23,11 @@ Design, build, and operate a self-hosted end-to-end cloud-native stack — Terra
 |---|---|
 | **Cloud Platforms** | AWS, VMware vSphere, OpenStack, Proxmox VE |
 | **Infrastructure as Code (IaC)** | Terraform, Ansible |
-| **Containers & Orchestration** | Docker, Podman, Kubernetes, CCE, Istio |
+| **Containers & Orchestration** | Docker, Podman, Kubernetes, Huawei CCE, Istio |
 | **Linux & Networking** | Debian, Ubuntu, TCP/IP, DNS, Load Balancing, VLAN, IPv4/IPv6, VPC, Subnet, Routing, VPC Peering, ELB, NAT Gateway, VPN Gateway |
 | **Automation & CI/CD** | Python, Bash, Go, GitHub Actions, FluxCD |
 | **Monitoring & Observability** | Zabbix, Prometheus, Grafana, Kiali, Vector, Quickwit |
-| **Security & IAM** | Security Group, ACL, AWS Secrets Manager |
+| **Cloud Security & IAM** | AWS Security Groups, Network ACLs, AWS Secrets Manager |
 
 ---
 
@@ -105,7 +105,7 @@ Support and operate network and infrastructure services within a national teleco
 ## Languages
 
 - **Thai** — Native
-- **English** — Intermediate
+- **English** — Working proficiency
 
 ---
 
