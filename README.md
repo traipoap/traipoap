@@ -5,14 +5,14 @@ I design, build, and operate **Kubernetes platforms** where everything — infra
 * ⏱️ A full platform (VMs, K3s cluster, service mesh, monitoring, logging) is provisioned in **under an hour** instead of several hours
 * ✅ **No manual Kubernetes deployment steps** — the cluster continuously reconciles itself to the state declared in Git
 * 🔁 A complete, repeatable rebuild of the environment — **structured like a real platform team: infra, app, and gitops repos with an automated handoff between them**
-* 🔒 **Security built into the pipeline** — secret scanning, SAST, and container image vulnerability scanning (caught & eliminated 67 critical/high-severity vulnerabilities)
+* 🔒 **Security built into the pipeline** — secret scanning, SAST, and container image vulnerability scanning
 
 ## What I do
 
 | Skill | In plain terms |
 |---|---|
 | **Infrastructure as Code** (Terraform, Ansible) | VMs, OS setup, and cluster installs are created from code — no manual clicks |
-| **GitOps** (Flux CD, Kustomize, Helm) | The cluster stays in sync with Git automatically; configuration drift is detected and corrected |
+| **GitOps** (Argo CD, Kustomize, Helm) | The cluster stays in sync with Git automatically; configuration drift is detected and corrected |
 | **CI/CD & DevSecOps** (GitHub Actions, Docker) | Push code → security gate (Gitleaks, SonarQube SAST, Trivy image scan) → build image → deploy, fully automated |
 | **Kubernetes & service mesh** (K3s, Istio, Gateway API) | K8s clusters with routing, TLS, and traffic visibility — **HA-ready by design** (masters auto-join via etcd token) |
 | **Observability** (Prometheus, Grafana, Kiali, Vector, Quickwit) | Metrics, dashboards, service-mesh traffic views, and centralized log search |
@@ -23,12 +23,10 @@ I design, build, and operate **Kubernetes platforms** where everything — infra
 | Service | URL |
 |---|---|
 | Log-Search App | https://app.traipoap.com |
-| Flux Web (GitOps UI) | https://flux-web.traipoap.com |
+| Argo CD (GitOps UI) | https://argocd.traipoap.com |
 | Grafana (Observability) | https://grafana.traipoap.com |
 | Kiali (Service Mesh) | https://kiali.traipoap.com |
 | SonarQube (SAST) | https://sonarqube.traipoap.com |
-
-> New service = 1 Gateway host + 1 Certificate + 1 HTTPRoute — TLS auto-issued by cert-manager, deployed via Flux from the [gitops repo](https://github.com/traipoap/gitops)
 
 ## Selected Projects
 
@@ -49,14 +47,20 @@ I design, build, and operate **Kubernetes platforms** where everything — infra
 * ⚡ Go API (JWT auth, log search, CSV export) + Astro/JS dashboard
 * Stack: Go (Gin), Astro/JS, Docker, GitHub Actions, Gitleaks, SonarQube, Trivy, GHCR
 
-### [GitOps — Flux CD Repository](https://github.com/traipoap/gitops)
+### [GitOps — Argo CD](https://github.com/traipoap/argocd-bootstrap) + [gitops manifests](https://github.com/traipoap/gitops)
 *Source of truth for the cluster — verified images from the App repo land here and are deployed automatically*
 
-* 🔄 **Flux CD** for the K3s cluster (embedded etcd; HA-ready: masters auto-join via etcd token) — continuous reconciliation, self-healing drift; **Image Automation** (semver policy → auto-commit → deploy)
+* 🔄 **Argo CD** for the K3s cluster (embedded etcd; HA-ready: masters auto-join via etcd token) — continuous reconciliation, self-healing drift; **Argo CD Image Updater** (semver policy → auto-update → deploy)
 * 🔐 **Secrets out of Git**: External Secrets Operator ← **AWS SecretsManager**; Kyverno policies + LimitRange defaults across all namespaces
-* 📜 **Vector → Quickwit** centralized logging + Grafana datasources, **Flux Web UI** for cluster health
+* 📜 **Vector → Quickwit** centralized logging + Grafana datasources, **Argo CD UI** for cluster health
 * 🚦 **base → staging → production** overlays with per-cluster bootstrapping
-* Stack: Flux CD, Kustomize, Helm, Istio Gateway API, cert-manager, External Secrets, Kyverno, Vector, Quickwit
+* **Stack:** Argo CD, Kustomize, Helm, Istio Gateway API, cert-manager, External Secrets, Kyverno, Vector, Quickwit
+
+### [AWS — Multi-region Failover DR](https://github.com/traipoap/infra/tree/main/aws)
+*Terraform for AWS — cross-provider disaster recovery for a production domain*
+
+* 🌏 **Multi-region failover**: primary origin behind **CloudFront origin groups** with automatic failover on 4xx/5xx to a **Lambda (Go/Gin, ECR)** API and **S3** static build in ap-southeast-1/7 and us-east-1
+* 🧩 **Terraform modules** (CloudFront, ECR, IAM, S3, ACM) — CloudFront Function for clean-URL routing, **OAC/SigV4** for private S3 access
 
 ## Certifications
 
