@@ -12,11 +12,11 @@ I design, build, and operate **Kubernetes platforms** where everything — infra
 | Skill | In plain terms |
 |---|---|
 | **Infrastructure as Code** (Terraform, Ansible) | VMs, OS setup, and cluster installs are created from code — no manual clicks |
-| **GitOps** (Argo CD, Kustomize, Helm) | The cluster stays in sync with Git automatically; configuration drift is detected and corrected |
+| **GitOps** (Argo CD, FluxCD, Kustomize, Helm) | The cluster stays in sync with Git automatically; configuration drift is detected and corrected |
 | **CI/CD & DevSecOps** (GitHub Actions, Docker) | Push code → security gate (Gitleaks, SonarQube SAST, Trivy image scan) → build image → deploy, fully automated |
 | **Kubernetes & service mesh** (K3s, Istio, Gateway API) | K8s clusters with routing, TLS, and traffic visibility — **HA-ready by design** (masters auto-join via etcd token) |
-| **Observability** (Prometheus, Grafana, Kiali, Vector, Quickwit) | Metrics, dashboards, service-mesh traffic views, and centralized log search |
-| **Security & storage** (NFS, Garage S3, cert-manager, RBAC, NetworkPolicy, Kyverno) | Persistent + S3-compatible storage, automated TLS, access control & admission policies |
+| **Observability** (Prometheus, Grafana, Kiali, OpenTelemetry, Loki) | Metrics, dashboards, service-mesh traffic views, and centralized log search |
+| **Security & storage** (NFS, Garage S3, RBAC, NetworkPolicy, LimitRange) | Persistent + S3-compatible storage, edge TLS, access control & resource governance |
 | **Application operations** (Go, JS) | Operate polyglot stacks — Go APIs, Astro/JS frontends |
 
 ## 🟢 Live Demos
@@ -43,18 +43,26 @@ I design, build, and operate **Kubernetes platforms** where everything — infra
 ### [App — Log-Search Platform](https://github.com/traipoap/app)
 *Go/GIN + Astro — the application, with a security-first release pipeline*
 
-* 🔒 **Security gates on every build**: Gitleaks (secret scan) + SonarQube (SAST) → build → **Trivy image scan (CRITICAL/HIGH gate, SARIF)** → GHCR — **caught & eliminated 67 critical/high-severity vulnerabilities**
+* 🔒 **Security gates on every build**: Gitleaks (secret scan) + SonarQube (SAST) → build → **Trivy image scan (CRITICAL/HIGH gate, SARIF)** → GHCR — **caught & eliminated 127 critical/high-severity vulnerabilities**
 * ⚡ Go API (JWT auth, log search, CSV export) + Astro/JS dashboard
 * Stack: Go (Gin), Astro/JS, Docker, GitHub Actions, Gitleaks, SonarQube, Trivy, GHCR
 
-### [GitOps — Argo CD](https://github.com/traipoap/argocd-bootstrap) + [gitops manifests](https://github.com/traipoap/gitops)
-*Source of truth for the cluster — verified images from the App repo land here and are deployed automatically*
+### [GitOps — FluxCD](https://github.com/traipoap/gitops)
+*First generation of the platform's GitOps — cluster source of truth on FluxCD*
 
-* 🔄 **Argo CD** for the K3s cluster (embedded etcd; HA-ready: masters auto-join via etcd token) — continuous reconciliation, self-healing drift; **Argo CD Image Updater** (semver policy → auto-update → deploy)
-* 🔐 **Secrets out of Git**: External Secrets Operator ← **AWS SecretsManager**; Kyverno policies + LimitRange defaults across all namespaces
-* 📜 **Vector → Quickwit** centralized logging + Grafana datasources, **Argo CD UI** for cluster health
-* 🚦 **base → staging → production** overlays with per-cluster bootstrapping
-* **Stack:** Argo CD, Kustomize, Helm, Istio Gateway API, cert-manager, External Secrets, Kyverno, Vector, Quickwit
+* 🔄 **FluxCD** for the K3s cluster (embedded etcd; HA-ready: masters auto-join via etcd token) — continuous reconciliation, self-healing drift
+* 🖼️ **FluxCD Image Automation** (ImageRepository + semver ImagePolicy) — new images auto-detected, tags updated, deployed
+* 🔐 **Secrets out of Git**: External Secrets Operator ← **AWS SecretsManager**
+* 🌐 **flux-web UI** (flux-operator) in server-only mode for cluster visibility
+* 🚦 **base → staging → production** overlays (Kustomize/Helm) with per-cluster bootstrapping
+
+### [GitOps — Argo CD](https://github.com/traipoap/argocd-bootstrap)
+*Current GitOps controller — the platform now reconciles on Argo CD*
+
+* 🔄 **Argo CD** (bootstrap repo + apps) — continuous reconciliation, self-healing drift; **Argo CD Image Updater** (semver policy → auto-update → deploy)
+* 📜 **OpenTelemetry → Loki** centralized logging + Grafana datasources, **Argo CD UI** for cluster health (argocd.traipoap.com)
+* 🛡️ **LimitRange defaults** across all namespaces + manifest validation
+* ✅ **Both GitOps controllers — FluxCD and Argo CD — operated in real environments**, same Git-as-source-of-truth discipline
 
 ### [AWS — Multi-region Failover DR](https://github.com/traipoap/infra/tree/main/aws)
 *Terraform for AWS — cross-provider disaster recovery for a production domain*
