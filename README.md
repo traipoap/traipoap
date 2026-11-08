@@ -43,7 +43,7 @@ I design, build, and operate **Kubernetes platforms** where everything — infra
 ### [App — Log-Search Platform](https://github.com/traipoap/app)
 *Go/GIN + Astro — the application, with a security-first release pipeline*
 
-* 🔒 **Security gates on every build**: Gitleaks (secret scan) + SonarQube (SAST) → build → **Trivy image scan (CRITICAL/HIGH gate, SARIF)** → GHCR — **caught & eliminated 127 critical/high-severity vulnerabilities**
+* 🔒 **Security gates on every build**: Gitleaks (secret scan) + SonarQube (SAST) → build → **Trivy image scan (CRITICAL/HIGH gate, SARIF)** → GHCR — **caught & eliminated 131 critical/high-severity vulnerabilities**
 * ⚡ Go API (JWT auth, log search, CSV export) + Astro/JS dashboard
 * Stack: Go (Gin), Astro/JS, Docker, GitHub Actions, Gitleaks, SonarQube, Trivy, GHCR
 
@@ -62,7 +62,7 @@ I design, build, and operate **Kubernetes platforms** where everything — infra
 * 🔄 **Argo CD** (bootstrap repo + apps) — continuous reconciliation, self-healing drift; **Argo CD Image Updater** (semver policy → auto-update → deploy)
 * 📜 **OpenTelemetry → Loki** centralized logging + Grafana datasources, **Argo CD UI** for cluster health (argocd.traipoap.com)
 * 🛡️ **LimitRange defaults** across all namespaces + manifest validation
-* ✅ **Both GitOps controllers — FluxCD and Argo CD — operated in real environments**, same Git-as-source-of-truth discipline
+* ✅ **GitOps controllers — Argo CD — operated in real environments**, same Git-as-source-of-truth discipline
 
 ### [AWS — Multi-region Failover DR](https://github.com/traipoap/infra/tree/main/aws)
 *Terraform for AWS — cross-provider disaster recovery for a production domain*
